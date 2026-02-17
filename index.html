@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Chibi Maruko-chan - Petualangan Super Imut 🌸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- UI Elemen yang Imut -->
+    <div class="story-container">
+        <div class="story-header">
+            <div class="title-star">⭐</div>
+            <h1 class="story-title">まる子の大好きな一日</h1>
+            <div class="title-star">⭐</div>
+        </div>
+        <div class="title-sub">Hari Spesial Maruko-chan</div>
+    </div>
+
+    <div class="dialogue-box">
+        <div class="character-icon" id="speaker-icon">👧</div>
+        <div class="dialogue-content">
+            <div class="speaker-name" id="speaker-name">Maruko-chan</div>
+            <div class="message" id="dialogue-message">Hari ini cuacanya bagus banget ya!</div>
+            <div class="message-small" id="dialogue-sub">(Today is such a lovely day!)</div>
+        </div>
+        <div class="dialogue-decoration">🌸</div>
+    </div>
+
+    <div class="controls-panel">
+        <div class="controls-header">
+            <span>🎮</span>
+            <span>Cara Main</span>
+            <span>🎮</span>
+        </div>
+        <div class="control-buttons">
+            <div class="control-btn" onclick="nextDialogue()">👉 Lanjut</div>
+            <div class="control-btn" onclick="toggleAutoPlay()">⏯️ Otomatis</div>
+            <div class="control-btn" onclick="toggleMusic()">🔊 Musik</div>
+        </div>
+        <div class="control-hint">Tekan Spasi buat lanjut cerita ya~</div>
+    </div>
+
+    <div class="cute-counter">
+        <div class="counter-item">
+            <span class="counter-emoji">😊</span>
+            <span class="counter-label">Kebahagiaan</span>
+            <span class="counter-value" id="happiness-meter">100%</span>
+        </div>
+        <div class="counter-item">
+            <span class="counter-emoji">🌸</span>
+            <span class="counter-label">Bunga</span>
+            <span class="counter-value" id="flower-counter">26</span>
+        </div>
+    </div>
+
+    <div class="floating-stickers" id="sticker-container"></div>
+
+    <!-- Import Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
